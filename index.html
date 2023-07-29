@@ -9,12 +9,14 @@
     body {
       background-color: #f0f0f0;
       color: #333;
+      font-family: Arial, sans-serif; /* Use a fallback font */
     }
 
     /* Dark mode styles */
     body.dark-mode {
       background-color: #303030;
       color: #f0f0f0;
+      font-family: Menlo, monospace; /* Use Menlo font for dark mode */
     }
 
     /* Toggle button styles */
@@ -53,7 +55,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       const darkModeToggle = document.createElement('div');
       darkModeToggle.classList.add('dark-mode-toggle');
-      darkModeToggle.innerHTML = '🌙';
+      darkModeToggle.innerHTML = '☼☽';
 
       darkModeToggle.addEventListener('click', toggleDarkMode);
 
