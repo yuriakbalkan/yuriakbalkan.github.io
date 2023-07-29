@@ -10,13 +10,14 @@
       background-color: #f0f0f0;
       color: #333;
       font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     /* Dark mode styles */
     body.dark-mode {
       background-color: #303030;
       color: #f0f0f0;
-      font-family: Arial, sans-serif;
     }
 
     /* Toggle button styles */
@@ -33,6 +34,27 @@
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 20px;
+    }
+
+    /* Responsive font size */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      body {
+        font-size: 20px;
+      }
+
+      .subtitle {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
