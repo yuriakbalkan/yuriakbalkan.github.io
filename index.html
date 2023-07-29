@@ -1,7 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Website</title>
+  <style>
+    /* Default light mode styles */
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #303030;
+      color: #f0f0f0;
+    }
+
+    /* Toggle button styles */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <h1>Welcome to Dark Mode Website</h1>
+    <!-- Add your navigation menu or any other header content here -->
+  </header>
+
+  <main>
+    <p>This is a sample dark mode website. Add your content here!</p>
+    <!-- Add more content as needed -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+    <!-- Add your footer content here -->
+  </footer>
+
+  <!-- Dark mode toggle button using JavaScript -->
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const darkModeToggle = document.createElement('div');
+      darkModeToggle.classList.add('dark-mode-toggle');
+      darkModeToggle.innerHTML = '🌙';
+
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+
+      document.body.appendChild(darkModeToggle);
+    });
+  </script>
 </body>
 </html>
