@@ -10,7 +10,7 @@
       background-color: #f0f0f0;
       color: #333;
       font-family: Arial, sans-serif;
-      font-size: 18px;
+      font-size: 16px; /* Step 1: Set font size to 16px */
       line-height: 1.6;
     }
 
@@ -39,7 +39,7 @@
     /* Responsive font size */
     @media screen and (max-width: 768px) {
       body {
-        font-size: 16px;
+        font-size: 14px; /* Adjust font size for smaller screens */
       }
 
       .subtitle {
@@ -49,11 +49,33 @@
 
     @media screen and (min-width: 1200px) {
       body {
-        font-size: 20px;
+        font-size: 18px; /* Adjust font size for larger screens */
       }
 
       .subtitle {
         font-size: 24px;
+      }
+    }
+
+    /* Step 2: Set line spacing to 120–145% of the point size */
+    p, h1, h4 {
+      margin: 0;
+      margin-bottom: 20px;
+      line-height: 1.45;
+    }
+
+    /* Step 4: Limit the line length to 66 characters (45–90 characters) */
+    @media screen and (max-width: 768px) {
+      main {
+        max-width: 30em; /* Set the maximum width for smaller screens */
+        margin: 0 auto; /* Center the content */
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      main {
+        max-width: 40em; /* Set the maximum width for larger screens */
+        margin: 0 auto; /* Center the content */
       }
     }
   </style>
@@ -67,17 +89,7 @@
 
   <main>
     <p class="subtitle">Biography</p>
-    <p>Yuri Akbalkan is a Russian-born composer making work in the field of multimedia art with a focus on human perception and&shy; sensory modalities.</p>
-
-    <p>He studied composition at the Rimski-Korsakov St. Petersburg State Conservatory with Prof. Sergei Slonimsky (RU) and at the Hochschule für Musik und Tanz Köln with Prof. Markus Hechtle (DE). Currently, he resides in Hamburg, where he is pursuing Artistic Research (Dr. sc. mus.) and teaching art theory at the Hochschule für Musik und Theater Hamburg.</p>
-    
-    <p>He held the position of an artist in residence at the ZKM | Zentrum für Kunst und Medien Karlsruhe as part of the Interdisciplinary Laboratory for New Music, Contemporary Dance, Theater, and New Media (a project of the Goethe-Institut).</p>
-
-    <p>During his time in St. Petersburg, he participated in the Electroacoustic Music Lab ESG-21, worked as a lecturer and co-curator of the Course in Experimental Music Practice, and held the position of the Editor-in-Chief at the Edition reMusik.org, which operates within the Saint Petersburg Contemporary Music Center.</p>
-    
-    <p>Akbalkan’s music has been performed at various locations and festivals, including reMusik.org, Sound Ways, Fin de siècle, blurred edges, Exposition XXI, Opus 52, ProToArt, the Pythian Games composers’ competition, Moscow Philharmonia, Saint Petersburg Philharmonia, Orpheus Radio, Manege Central Exhibition Hall, and the New Stage of Alexandrinsky Theatre.</p>
-    
-    <p>His works have been performed by ensemble recherche, noname-ensemble, Moscow Contemporary Music Ensemble (MCME), MolOt-ensemble, Gallery of Actual Music Ensemble (GAM-Ensemble), eNsemble Pro Arte, Mariinsky New Music Ensemble, {instead} ensemble, Ensemble Adapter, and Chromatic Noise Collection.</p>
+    <p>Yuri Akbalkan is a Russian-born composer making work in the field of multimedia art with a focus on human perception and&shy; sensory modalities. He studied composition at the Rimski-Korsakov St. Petersburg State Conservatory with Prof. Sergei Slonimsky (RU) and at the Hochschule für Musik und Tanz Köln with Prof. Markus Hechtle (DE). Currently, he resides in Hamburg, where he is pursuing Artistic Research (Dr. sc. mus.) and teaching art theory at the Hochschule für Musik und Theater Hamburg. He held the position of an artist in residence at the ZKM | Zentrum für Kunst und Medien Karlsruhe as part of the Interdisciplinary Laboratory for New Music, Contemporary Dance, Theater, and New Media (a project of the Goethe-Institut). During his time in St. Petersburg, he participated in the Electroacoustic Music Lab ESG-21, worked as a lecturer and co-curator of the Course in Experimental Music Practice, and held the position of the Editor-in-Chief at the Edition reMusik.org, which operates within the Saint Petersburg Contemporary Music Center. Akbalkan’s music has been performed at various locations and festivals, including reMusik.org, Sound Ways, Fin de siècle, blurred edges, Exposition XXI, Opus 52, ProToArt, the Pythian Games composers’ competition, Moscow Philharmonia, Saint Petersburg Philharmonia, Orpheus Radio, Manege Central Exhibition Hall, and the New Stage of Alexandrinsky Theatre. His works have been performed by ensemble recherche, noname-ensemble, Moscow Contemporary Music Ensemble (MCME), MolOt-ensemble, Gallery of Actual Music Ensemble (GAM-Ensemble), eNsemble Pro Arte, Mariinsky New Music Ensemble, {instead} ensemble, Ensemble Adapter, and Chromatic Noise Collection.</p>
   </main>
 
   <footer>
@@ -93,14 +105,4 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      const darkModeToggle = document.createElement('div');
-      darkModeToggle.classList.add('dark-mode-toggle');
-      darkModeToggle.innerHTML = '☼☽';
-
-      darkModeToggle.addEventListener('click', toggleDarkMode);
-
-      document.body.appendChild(darkModeToggle);
-    });
-  </script>
-</body>
-</html>
+     
