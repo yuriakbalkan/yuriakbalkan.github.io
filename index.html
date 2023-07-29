@@ -36,6 +36,11 @@
       margin-bottom: 20px;
     }
 
+    /* Header styles */
+    header {
+      margin-bottom: 10px; /* Less space between h1 and h4 */
+    }
+
     /* Responsive font size */
     @media screen and (max-width: 768px) {
       body {
@@ -78,6 +83,11 @@
         margin: 0 auto; /* Center the content */
       }
     }
+
+    /* Footer styles */
+    footer {
+      margin-top: 40px; /* More space before the footer */
+    }
   </style>
 </head>
 <body>
@@ -105,4 +115,14 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-     
+      const darkModeToggle = document.createElement('div');
+      darkModeToggle.classList.add('dark-mode-toggle');
+      darkModeToggle.innerHTML = '☼☽';
+
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+
+      document.body.appendChild(darkModeToggle);
+    });
+  </script>
+</body>
+</html>
